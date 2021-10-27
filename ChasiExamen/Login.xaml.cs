@@ -33,13 +33,13 @@ namespace ChasiExamen
                 if (txtUsuario.Text == "estudiante2021" && txtContrasenia.Text == "uisrael2021")
                 {
                     //permite abrir la ventana de notas (MainPage)
-                    await Navigation.PushAsync(new MainPage(usuario));
-                    await DisplayAlert("Estudiante", "Estudiante Correcto", "OK");
+                    await Navigation.PushAsync(new Registro(usuario));
+                    await DisplayAlert("Usuario", "Usuario Conectado", "OK");
                 }
                 else if (txtUsuario.Text != "null")
                 {
                     //mensaje de validacion de usuario
-                    await DisplayAlert("Estudiante", "Estudiante InCorrecto", "OK");
+                    await DisplayAlert("Usuario", "Usuario InCorrecto", "OK");
 
                     // await Navigation.PushAsync(new login());
                 }

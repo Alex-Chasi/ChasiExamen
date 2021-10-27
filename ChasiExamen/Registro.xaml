@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChasiExamen.Registro">
-    <ContentPage.Content>
+    <ContentPage.Content>      
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Semana 2: Elementos Visuales Calcular" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
+                <Label x:Name="lblUsuario"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

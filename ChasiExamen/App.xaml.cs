@@ -11,7 +11,9 @@ namespace ChasiExamen
             InitializeComponent();
 
            // MainPage = new MainPage();
-            MainPage = new Login();
+           // MainPage = new Login();
+
+            MainPage = new NavigationPage(new Login());
 
         }
 

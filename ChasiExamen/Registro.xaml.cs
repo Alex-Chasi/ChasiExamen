@@ -12,9 +12,11 @@ namespace ChasiExamen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro : ContentPage
     {
-        public Registro()
+        public Registro(string usuario)
         {
             InitializeComponent();
+            //visualizamos en el label el usuario insertado
+            lblUsuario.Text = usuario;
         }
     }
 }
