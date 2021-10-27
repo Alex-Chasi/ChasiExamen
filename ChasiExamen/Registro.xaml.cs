@@ -21,46 +21,64 @@ namespace ChasiExamen
 
         private void btnCalcular_Clicked(object sender, EventArgs e)
         {
-           
+
             try
             {
                 //almacenamos en variable los datos del usuario ingresado 
                 string nombre = txtNombre.Text;
 
-                //navega a otra ventana 
-                Navigation.PushAsync(new Resumen(nombre));
+                string total = txtTotal.Text;
 
                 double montoi = Convert.ToInt32(txtMontoInicial.Text);
 
-                double porcentaje = (montoi * 0.05);
+                if (montoi == 1800)
+                {
 
-                double portatotal = porcentaje * 3;
+                    double porcentaje = montoi * 0.05;
 
-                double pagom= Convert.ToInt32(txtPagoMensual.Text);
+                    double portatotal = porcentaje * 3;
 
-                //valor total a calcular
-                double cal1 = (pagom - montoi);
-                double cal2 = (cal1 / 3);
+                    double pagom = Convert.ToInt32(txtPagoMensual.Text);
+                    if (pagom >= 1)
+                    {
 
-                double cal3 = cal2 * 3;
+                        //navega a otra ventana 
+                        Navigation.PushAsync(new Resumen(nombre, total));
 
-                double totalpagar = cal3 + portatotal;
+                        //valor total a calcular
+                        double cal1 = montoi - pagom;
+                        double cal2 = (cal1 / 3);
 
-                //Visualizar el resultado en pantalla.
-                txtTotal.Text = totalpagar.ToString();
+                        double cal3 = cal2 * 3;
 
+                        double totalpagar = cal3 + portatotal;
 
+                        //Visualizar el resultado en pantalla.
+                        txtTotal.Text = totalpagar.ToString();
 
+                        DisplayAlert("Guardado", "Elemento guardado con exito", "OK");
+
+                    }
+                    else if (pagom <= 1)
+                    {
+                        DisplayAlert("Ingrese", "Ingrese Pago Mensual Mayor a 1", "OK");
+
+                    }
+
+                }
+                else if (montoi >= 1800)
+                {
+                    DisplayAlert("Ingrese", "Ingrese Monto Menor a 1800", "OK");
+                }
+                else if (montoi <= 1)
+                {
+                    DisplayAlert("Ingrese", "Ingrese Monto Mayor a 1", "OK");
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
             }
-            
-            
-            
-
 
         }
     }

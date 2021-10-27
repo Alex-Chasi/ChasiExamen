@@ -6,11 +6,37 @@
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                 <Label Text="Resumen de la Inscripción" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
-                <Label x:Name="lblNombre"/>
-
-
-
+               
             </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="El nombre es : " Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="lblNombre" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Total A Pago es: " Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="lblTotal" Grid.Row="2" Grid.Column="1"/>
+
+
+
+
+
+
+            </Grid>            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

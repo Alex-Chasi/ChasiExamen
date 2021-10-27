@@ -33,8 +33,8 @@
                 <Label Text="Pago Mensual es: " Grid.Row="2" Grid.Column="0"/>
                 <Entry x:Name="txtPagoMensual" Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
 
-                <Label Text="Total a Pagar es: " Grid.Row="4" Grid.Column="0"/>
-                <Entry x:Name="txtTotal" IsReadOnly="True" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="Total a Pagar es: " Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtTotal" IsReadOnly="True" Grid.Row="3" Grid.Column="1"/>
 
             </Grid>
             <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked"/>
