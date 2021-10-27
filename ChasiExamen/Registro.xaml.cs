@@ -34,6 +34,8 @@ namespace ChasiExamen
 
                 double porcentaje = (montoi * 0.05);
 
+                double portatotal = porcentaje * 3;
+
                 double pagom= Convert.ToInt32(txtPagoMensual.Text);
 
                 //valor total a calcular
@@ -42,6 +44,10 @@ namespace ChasiExamen
 
                 double cal3 = cal2 * 3;
 
+                double totalpagar = cal3 + portatotal;
+
+                //Visualizar el resultado en pantalla.
+                txtTotal.Text = totalpagar.ToString();
 
 
 
