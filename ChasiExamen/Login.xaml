@@ -6,7 +6,7 @@
         <StackLayout>
             <Image Source="uisrael.png"/>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Bienvenidos al SIGE" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+                <Label Text="Bienvenido a Cursos Online" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
             </Frame>
             <Entry x:Name="txtUsuario" Placeholder="Ingrese Usuario" />
             <Entry x:Name="txtContrasenia" Placeholder="Ingrese Contraseña" IsPassword="True"/>
