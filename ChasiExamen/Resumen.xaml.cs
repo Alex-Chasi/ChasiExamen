@@ -12,9 +12,11 @@ namespace ChasiExamen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen()
+        public Resumen(string nombre)
         {
             InitializeComponent();
+            //visualizamos en el label el usuario insertado
+            lblNombre.Text = nombre;
         }
     }
 }

@@ -18,5 +18,12 @@ namespace ChasiExamen
             //visualizamos en el label el usuario insertado
             lblUsuario.Text = usuario;
         }
+
+        private void btnCalcular_Clicked(object sender, EventArgs e)
+        {
+            //almacenamos en variable los datos del usuario ingresado 
+            string nombre = txtNombre.Text;
+
+        }
     }
 }

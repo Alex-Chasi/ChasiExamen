@@ -4,9 +4,11 @@
              x:Class="ChasiExamen.Resumen">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Resumen de la Inscripción" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
+                <Label x:Name="lblNombre"/>
+
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
