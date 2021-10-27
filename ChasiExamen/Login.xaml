@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChasiExamen.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="uisrael.png"/>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Bienvenidos al SIGE" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese Usuario" />
+            <Entry x:Name="txtContrasenia" Placeholder="Ingrese Contraseña" IsPassword="True"/>
+            <Button x:Name="btnIniciar" Text="Iniciar Sesión" Clicked="btnIniciar_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
