@@ -6,7 +6,8 @@
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                 <Label Text="Resumen de la Inscripción" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
-               
+                
+                <Label x:Name="lblUsuario"/>
             </Frame>
             <Grid>
                 <Grid.RowDefinitions>
@@ -14,7 +15,6 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-
 
 
                 </Grid.RowDefinitions>
@@ -30,12 +30,7 @@
 
                 <Label Text="Total A Pago es: " Grid.Row="2" Grid.Column="0"/>
                 <Label x:Name="lblTotal" Grid.Row="2" Grid.Column="1"/>
-
-
-
-
-
-
+                
             </Grid>            
         </StackLayout>
     </ContentPage.Content>

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace ChasiExamen
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Registro : ContentPage
+    public partial class Registro : ContentPage 
     {
         public Registro(string usuario)
         {
@@ -18,8 +18,8 @@ namespace ChasiExamen
             //visualizamos en el label el usuario insertado
             lblUsuario.Text = usuario;
         }
-
-        private void btnCalcular_Clicked(object sender, EventArgs e)
+        //agregamos (async) el hilo de conexion entre ventanas
+        private async void btnCalcular_Clicked(object sender, EventArgs e)
         {
 
             try
@@ -28,6 +28,9 @@ namespace ChasiExamen
                 string nombre = txtNombre.Text;
 
                 string total = txtTotal.Text;
+
+                string usuario = txtNombre.Text;
+
 
                 double montoi = Convert.ToInt32(txtMontoInicial.Text);
 
@@ -43,7 +46,7 @@ namespace ChasiExamen
                     {
 
                         //navega a otra ventana 
-                        Navigation.PushAsync(new Resumen(nombre, total));
+                        await Navigation.PushAsync(new Resumen(nombre, total,usuario));
 
                         //valor total a calcular
                         double cal1 = montoi - pagom;
@@ -55,29 +58,30 @@ namespace ChasiExamen
 
                         //Visualizar el resultado en pantalla.
                         txtTotal.Text = totalpagar.ToString();
+                        
 
-                        DisplayAlert("Guardado", "Elemento guardado con exito", "OK");
+                        await DisplayAlert("Guardado", "Elemento guardado con exito", "OK");
 
                     }
                     else if (pagom <= 1)
                     {
-                        DisplayAlert("Ingrese", "Ingrese Pago Mensual Mayor a 1", "OK");
+                        await DisplayAlert("Ingrese", "Ingrese Pago Mensual Mayor a 1", "OK");
 
                     }
 
                 }
                 else if (montoi >= 1800)
                 {
-                    DisplayAlert("Ingrese", "Ingrese Monto Menor a 1800", "OK");
+                    await DisplayAlert("Ingrese", "Ingrese Monto Menor a 1800", "OK");
                 }
                 else if (montoi <= 1)
                 {
-                    DisplayAlert("Ingrese", "Ingrese Monto Mayor a 1", "OK");
+                    await DisplayAlert("Ingrese", "Ingrese Monto Mayor a 1", "OK");
                 }
             }
             catch (Exception ex)
             {
-                DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
+                await DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
             }
 
         }
