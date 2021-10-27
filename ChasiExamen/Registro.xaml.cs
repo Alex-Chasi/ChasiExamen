@@ -24,6 +24,9 @@ namespace ChasiExamen
             //almacenamos en variable los datos del usuario ingresado 
             string nombre = txtNombre.Text;
 
+            Navigation.PushAsync(new Resumen(nombre));
+
+
         }
     }
 }
