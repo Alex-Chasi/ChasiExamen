@@ -21,10 +21,39 @@ namespace ChasiExamen
 
         private void btnCalcular_Clicked(object sender, EventArgs e)
         {
-            //almacenamos en variable los datos del usuario ingresado 
-            string nombre = txtNombre.Text;
+           
+            try
+            {
+                //almacenamos en variable los datos del usuario ingresado 
+                string nombre = txtNombre.Text;
 
-            Navigation.PushAsync(new Resumen(nombre));
+                //navega a otra ventana 
+                Navigation.PushAsync(new Resumen(nombre));
+
+                double montoi = Convert.ToInt32(txtMontoInicial.Text);
+
+                double porcentaje = (montoi * 0.05);
+
+                double pagom= Convert.ToInt32(txtPagoMensual.Text);
+
+                //valor total a calcular
+                double cal1 = (pagom - montoi);
+                double cal2 = (cal1 / 3);
+
+                double cal3 = cal2 * 3;
+
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+            
+            
 
 
         }

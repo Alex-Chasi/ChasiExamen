@@ -8,6 +8,8 @@
                 <Label Text="Resumen de la Inscripción" HorizontalTextAlignment="Center" TextColor="Black" FontSize="18"/>
                 <Label x:Name="lblNombre"/>
 
+
+
             </Frame>
         </StackLayout>
     </ContentPage.Content>
